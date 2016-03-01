@@ -5,10 +5,10 @@
     xmlns:bind="http://schemas.android.com/tools">
 
     <data>
-        <import type="android.view.View"/>
-        <import type="org.androidcru.crucentralcoast.presentation.viewmodels.ridesharing.RideVM"/>
-        <import type="org.androidcru.crucentralcoast.data.models.Ride"/>
-        <variable name="rideVM" type="RideVM"/>
+        <import resourceType="android.view.View"/>
+        <import resourceType="org.androidcru.crucentralcoast.presentation.viewmodels.ridesharing.RideVM"/>
+        <import resourceType="org.androidcru.crucentralcoast.data.models.Ride"/>
+        <variable name="rideVM" resourceType="RideVM"/>
     </data>
 
     <android.support.design.widget.CoordinatorLayout
@@ -187,7 +187,7 @@
                     </LinearLayout>
                 </RelativeLayout>
 
-                <!-- trip type -->
+                <!-- trip resourceType -->
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="72dp"

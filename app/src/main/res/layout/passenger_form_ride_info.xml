@@ -4,10 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     
     <data>
-        <import type="android.view.View"/>
-        <import type="org.androidcru.crucentralcoast.presentation.viewmodels.ridesharing.RideFilterVM"/>
-        <import type="org.androidcru.crucentralcoast.data.models.Ride"/>
-        <variable name="rideFilterVM" type="RideFilterVM"/>
+        <import resourceType="android.view.View"/>
+        <import resourceType="org.androidcru.crucentralcoast.presentation.viewmodels.ridesharing.RideFilterVM"/>
+        <import resourceType="org.androidcru.crucentralcoast.data.models.Ride"/>
+        <variable name="rideFilterVM" resourceType="RideFilterVM"/>
     </data>
 
     <LinearLayout 
@@ -35,7 +35,7 @@
                 class="com.google.android.gms.location.places.ui.SupportPlaceAutocompleteFragment"/>
         </RelativeLayout>
     
-        <!-- trip type -->
+        <!-- trip resourceType -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="72dp"

@@ -3,9 +3,9 @@
 <layout>
 
     <data>
-        <import type="android.view.View"/>
-        <import type="org.androidcru.crucentralcoast.presentation.viewmodels.ridesharing.CruEventVM"/>
-        <variable name="event" type="CruEventVM"/>
+        <import resourceType="android.view.View"/>
+        <import resourceType="org.androidcru.crucentralcoast.presentation.viewmodels.ridesharing.CruEventVM"/>
+        <variable name="event" resourceType="CruEventVM"/>
     </data>
 
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"

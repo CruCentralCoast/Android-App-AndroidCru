@@ -2,8 +2,8 @@
 <layout>
 
     <data>
-        <import type="org.androidcru.crucentralcoast.presentation.viewmodels.ridesharing.RideResultVM"/>
-        <variable name="rideResultVM" type="RideResultVM"/>
+        <import resourceType="org.androidcru.crucentralcoast.presentation.viewmodels.ridesharing.RideResultVM"/>
+        <variable name="rideResultVM" resourceType="RideResultVM"/>
     </data>
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"

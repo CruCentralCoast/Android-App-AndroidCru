@@ -3,9 +3,9 @@
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="org.androidcru.crucentralcoast.presentation.viewmodels.ridesharing.PassengerVM"/>
-        <import type="org.androidcru.crucentralcoast.data.models.Passenger"/>
-        <variable name="passengerVM" type="PassengerVM"/>
+        <import resourceType="org.androidcru.crucentralcoast.presentation.viewmodels.ridesharing.PassengerVM"/>
+        <import resourceType="org.androidcru.crucentralcoast.data.models.Passenger"/>
+        <variable name="passengerVM" resourceType="PassengerVM"/>
     </data>
 
     <LinearLayout

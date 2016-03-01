@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <data>
-        <import type="org.androidcru.crucentralcoast.presentation.viewmodels.subscriptions.MinistrySubscriptionVM" />
-        <variable name="subscription" type="MinistrySubscriptionVM"/>
+        <import resourceType="org.androidcru.crucentralcoast.presentation.viewmodels.subscriptions.MinistrySubscriptionVM" />
+        <variable name="subscription" resourceType="MinistrySubscriptionVM"/>
     </data>
     <RelativeLayout
                     android:layout_width="match_parent"
