@@ -30,4 +30,15 @@
         <item name="android:textColor">@android:color/white</item>
     </style>
 
+    <style name="TagGroup">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="atg_borderColor">@color/cruDarkBlue</item>
+        <item name="atg_textColor">@color/cruDarkBlue</item>
+        <item name="atg_dashBorderColor">@color/cruDarkBlue</item>
+        <item name="atg_checkedBorderColor">@color/cruDarkBlue</item>
+        <item name="atg_checkedBackgroundColor">@color/cruDarkBlue</item>
+        <item name="atg_textSize">14sp</item>
+    </style>
+
 </resources>

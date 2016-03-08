@@ -4,10 +4,15 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.customtabs.CustomTabsIntent;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.orhanobut.logger.Logger;
 
@@ -19,6 +24,10 @@ import org.androidcru.crucentralcoast.presentation.views.ListFragment;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import me.gujun.android.taggroup.TagGroup;
 import rx.Observer;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
@@ -26,6 +35,9 @@ import rx.android.schedulers.AndroidSchedulers;
 public class ArticlesFragment extends ListFragment
 {
     private CustomTabsIntent.Builder customTabsIntentBuilder;
+    private AppCompatDialog dialog;
+    TagGroup tagGroup;
+    Button ok;
 
     private ArrayList<Resource> resources;
     private Observer<List<Resource>> resourceSubscriber;
@@ -82,6 +94,8 @@ public class ArticlesFragment extends ListFragment
         //parent class calls ButterKnife for view injection and setups SwipeRefreshLayout
         super.onViewCreated(view, savedInstanceState);
 
+        setupDialog();
+
         //Update the list of resources by pulling from the server
         forceUpdate();
 
@@ -92,6 +106,42 @@ public class ArticlesFragment extends ListFragment
         setupCustomTab();
 
         swipeRefreshLayout.setOnRefreshListener(this::forceUpdate);
+
+        setHasOptionsMenu(true);
+    }
+
+    private void setupDialog()
+    {
+        dialog = new AppCompatDialog(getContext());
+        dialog.setContentView(R.layout.filter_dialog);
+        ok = (Button) dialog.findViewById(R.id.ok);
+        tagGroup = (TagGroup) dialog.findViewById(R.id.tag_group);
+
+        ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.cancel();
+            }
+        });
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.filter, menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId())
+        {
+            case R.id.action_filter:
+                dialog.show();
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

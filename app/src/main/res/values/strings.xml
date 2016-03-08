@@ -71,6 +71,8 @@
     <string name="view_upcoming_events">View Upcoming Events</string>
     <string name="not_driving">You are not currently signed up to drive to an event.</string>
     <string name="not_getting_a_ride">You are not currently signed up to get a ride to an event.</string>
+    <string name="filter">Filter</string>
+    <string name="okay">OKAY</string>
 
 
     <string-array name="genders">
