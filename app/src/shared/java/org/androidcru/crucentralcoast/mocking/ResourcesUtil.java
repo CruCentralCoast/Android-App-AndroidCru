@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 public class ResourcesUtil
 {
-    public static String getResourceAsString(ClassLoader classLoader, String resourceName)
+    public static String getResourceAsString(String resourceName)
     {
-        return convertStreamToString(classLoader.getResourceAsStream(resourceName));
+        return convertStreamToString(ClassLoader.getSystemResourceAsStream(resourceName));
     }
 
     public static String convertStreamToString(InputStream is) {

@@ -18,7 +18,7 @@ public class EventProviderTest extends ServerTest
     @Test
     public void testEvents()
     {
-        String eventsJson = ResourcesUtil.getResourceAsString(getClass().getClassLoader(), "events.json");
+        String eventsJson = ResourcesUtil.getResourceAsString("server/events.json");
         server.enqueue(new MockResponse().setBody(eventsJson));
         ArrayList<CruEvent> events = CruApplication.gson.fromJson(eventsJson, new TypeToken<ArrayList<CruEvent>>(){}.getType());
 
